@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Goal from "../pages/Goal"
 import Home from "../pages/Home"
+import Show from "../pages/Show"
 
 export default function Main(props) {
     const [goals, setGoals] = useState([])
@@ -9,28 +10,36 @@ export default function Main(props) {
     const getGoals = async () => {
         const response = await fetch(URL)
         const data = await response.json()
-        console.log(data)
 
         setGoals(data)
+        console.log(data)
     }
 
-    const createGoals = async (goals) => {
-        await fetch(URL, {method: "POST", headers:{"Content-Type": "Application/json",}, body: JSON.stringify(goals),})
+    const createGoals = async (goal) => {
+        await fetch(URL, {
+            method: "POST", 
+            headers:{
+                "Content-Type": "Application/json", 
+            }, 
+            body: JSON.stringify(goal), 
+            
+        })
         getGoals()
+
     }
 
-    const updateGoals = async (goals) => {
+    const updateGoals = async (goal, id) => {
         await fetch(URL + id, {
             method: "PUT",
             headers: {
               'Content-Type': 'Application/json'
             },
-            body: JSON.stringify(goals)
+            body: JSON.stringify(goal)
           })
           getGoals()
     }
     
-    const deleteGoals = async (goals) => {
+    const deleteGoals = async (id) => {
         await fetch(URL + id,{method: 'DELETE'})
         getGoals()
     }
@@ -44,10 +53,10 @@ export default function Main(props) {
         <Route
           exact
           path="/"
-          element={<Index goals={goals} />} />
+          element={<Home goals={goals} />} />
         <Route
           path="/goals"
-          element={<Create createGoals={createGoals} />}
+          element={<Goal createGoals={createGoals} />}
         />
         <Route
           path="/goals/:id"

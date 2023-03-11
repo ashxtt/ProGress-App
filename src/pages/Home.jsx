@@ -1,3 +1,6 @@
+
+import { Link } from 'react-router-dom'
+
 export default function Home(props) {
     const loaded = () => {
         return props.goals.map((goal) => (
@@ -20,7 +23,7 @@ export default function Home(props) {
     return(
         <div className="Home">
             <h1>hy</h1>
-            <button><Link to="/goaladd">Start Now</Link></button>
+            <button><Link to="/goals">Start Now</Link></button>
         <section >
             {props.goals ? loaded() : loading()}
         </section>

@@ -1,9 +1,7 @@
 
 //import components/pages
 import Header from "./components/Header"
-import { Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import Goal from "./pages/Goal"
+import Main from './components/Main';
 
 function App() {
 
@@ -11,9 +9,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Main />
+
     </div>
   );
 }
