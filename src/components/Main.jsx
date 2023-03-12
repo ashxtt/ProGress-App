@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
-import Goal from "../pages/Goal"
+import Addgoal from "../pages/Addgoal"
+import Editgoal from "../pages/Editgoal"
 import Home from "../pages/Home"
 import Show from "../pages/Show"
+import Index from "../pages/Index"
 
 export default function Main(props) {
+  const URL = "http://localhost:8000/goals/"
+
     const [goals, setGoals] = useState([])
 
     const getGoals = async () => {
@@ -28,13 +32,13 @@ export default function Main(props) {
 
     }
 
-    const updateGoals = async (goal, id) => {
+    const updateGoals = async (goals, id) => {
         await fetch(URL + id, {
             method: "PUT",
             headers: {
               'Content-Type': 'Application/json'
             },
-            body: JSON.stringify(goal)
+            body: JSON.stringify(goals)
           })
           getGoals()
     }
@@ -43,28 +47,29 @@ export default function Main(props) {
         await fetch(URL + id,{method: 'DELETE'})
         getGoals()
     }
+
     useEffect(() => {
+      
         getGoals()
     }, [])
 
     return (
         <main>
             <Routes>
+              <Route path="/" element={<Home />} />
+        
+          <Route exact path="/goals/" element={<Index goals={goals} />} />
         <Route
-          exact
-          path="/"
-          element={<Home goals={goals} />} />
-        <Route
-          path="/goals"
-          element={<Goal createGoals={createGoals} />}
+          path="/goals/add"
+          element={<Addgoal createGoals={createGoals} />}
         />
+        <Route path="/goals/:id/edit" element = {<Editgoal goals = {goals} updateGoals = {updateGoals} deleteGoals = {deleteGoals} />} />
         <Route
           path="/goals/:id"
           element={
             <Show
               goals={goals}
-              updateGoals={updateGoals}
-              deleteGoals={deleteGoals}
+              
             />
           } />
       </Routes>
