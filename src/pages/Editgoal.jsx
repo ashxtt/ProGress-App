@@ -29,12 +29,12 @@ export default function Editgoal(props) {
     }
 
     return(
-        <section className="content-layout">
+        <section className="content-layout p-3 text-white">
             
           <form onSubmit={handleSubmit}>
             <div>
-              Title:<input
-              className="input"
+              Goal:<input
+              className="goal-input bg-black w-fit"
               type="text"
               value={editForm.title}
               name="title"
@@ -43,8 +43,8 @@ export default function Editgoal(props) {
             />
             </div>
             <div>
-              Body:<input
-              className="input"
+              Course of Action:<input
+              className="body-input bg-black"
               type="text"
               value={editForm.body}
               name="body"
@@ -53,8 +53,8 @@ export default function Editgoal(props) {
             /> 
             </div>
             <div>
-              Date:<input
-              className="input"
+              Today's Date:<input
+              className="date-input bg-black"
               type="text"
               value={editForm.date}
               name="date"
@@ -67,8 +67,8 @@ export default function Editgoal(props) {
             
             
             
-            <div><input id = "update-button"className="input" type="submit" value="Update"/></div>
-            <button id="delete-button" className="input button" onClick = {()=>removeGoal(goal._id)}>Delete</button>
+            <div><input id = "update-button"className="update-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" type="submit" value="Update"/></div>
+            <button id="delete-button" className="delete-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" onClick = {()=>removeGoal(goal._id)}>Delete</button>
 
           </form>
         </section>

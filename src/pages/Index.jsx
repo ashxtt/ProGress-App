@@ -5,10 +5,10 @@ function Index(props) {
   const loaded =()=>{
 
     return props.goals.map((goal) =>(
-      <div  key = {goal._id}>
+      <div className="p-3"  key = {goal._id}>
         <Link to={`/goals/${goal._id}`}>
-          <div className="goals">   
-            <p>{goal.title}</p>
+          <div className="border rounded-md w-fit p-2 hover:shadow-dark shadow-xl">   
+            <p className="">{goal.title}</p>
           </div>
           
         </Link>
@@ -21,12 +21,12 @@ function Index(props) {
     return <h1>Loading...</h1>
   }
   return(
-  <div className="content-margin">
+  <div className="list-contents text-white p-2 m-0 ">
     <div id="content-title">
-        <h3 className="title">Your Goal List: </h3>
+        <h2 className="text-2xl">Your List of Goals: </h2>
         
     </div>
-    <div className="index-container">
+    <div className="Goal-content text-3xl p-5">
         {props.goals ? loaded() : loading()}
     </div>
     
