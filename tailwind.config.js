@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
+    
     colors: {
       'black': '#141414',
       'green': '#3fffa3',
@@ -9,6 +10,10 @@ module.exports = {
       'dark': '#000000',
     },
   },
-  extend: {},
+  extend: {
+    fontFamily: {
+      'quicksand': 'Quicksand'
+    }
+  },
   plugins: [],
 }

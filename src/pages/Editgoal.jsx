@@ -29,12 +29,12 @@ export default function Editgoal(props) {
     }
 
     return(
-        <section className="content-layout p-3 text-white">
+        <section className="content-layout p-4 text-white">
             
-          <form onSubmit={handleSubmit}>
-            <div>
+          <form className='' onSubmit={handleSubmit}>
+            <div className='p-3 text-3xl'>
               Goal:<input
-              className="goal-input bg-black w-fit"
+              className="goal-input bg-black w-fit text-2xl"
               type="text"
               value={editForm.title}
               name="title"
@@ -42,9 +42,9 @@ export default function Editgoal(props) {
               onChange={handleChange}
             />
             </div>
-            <div>
+            <div className='p-3 text-3xl'>
               Course of Action:<input
-              className="body-input bg-black"
+              className="body-input bg-black text-2xl"
               type="text"
               value={editForm.body}
               name="body"
@@ -52,9 +52,9 @@ export default function Editgoal(props) {
               onChange={handleChange}
             /> 
             </div>
-            <div>
+            <div className='p-3 text-3xl'>
               Today's Date:<input
-              className="date-input bg-black"
+              className="text-2xl date-input bg-black"
               type="text"
               value={editForm.date}
               name="date"
@@ -67,8 +67,8 @@ export default function Editgoal(props) {
             
             
             
-            <div><input id = "update-button"className="update-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" type="submit" value="Update"/></div>
-            <button id="delete-button" className="delete-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" onClick = {()=>removeGoal(goal._id)}>Delete</button>
+            <div className=''><input className="update-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" type="submit" value="Update"/></div>
+            <button className="delete-button text-white border rounded-md p-1 w-72 hover:shadow-dark shadow-xl" onClick = {()=>removeGoal(goal._id)}>Delete</button>
 
           </form>
         </section>

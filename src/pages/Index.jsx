@@ -8,7 +8,7 @@ function Index(props) {
       <div className="p-3"  key = {goal._id}>
         <Link to={`/goals/${goal._id}`}>
           <div className="border rounded-md w-fit p-2 hover:shadow-dark shadow-xl">   
-            <p className="">{goal.title}</p>
+            <p className="text-2xl"><span className="text-4xl text-green">Your Goal:</span> {goal.title}</p>
           </div>
           
         </Link>
