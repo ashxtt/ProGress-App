@@ -26,8 +26,6 @@
   },
   "scripts": {
     "start": "craco start",
-    "build:css": "postcss src/tailwind.css -o static/dist/tailwind.css",
-    "watch": "watch 'npm run build:css' ./layouts",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
