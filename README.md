@@ -37,3 +37,8 @@ An app to assist people who struggle with completing tasks on time, being commit
 }
 ```
 
+## Future Enhancemnets
+- user be able to log in/create an account
+- When a user acoomplish a goal, they will be able to post on their feed about it
+- 
+
