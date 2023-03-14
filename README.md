@@ -12,7 +12,7 @@ An app to assist people who struggle with completing tasks on time, being commit
 - Tailwind CSS
 
 ## Screenshots
-![Home Page](images/progress hameepage.PNG)
+![Home Page](images/progress%20hameepage.PNG)
 ![goal list](images/view list of goals.PNG)
 ![goal view](images/goal view course of action.PNG)
 ![add goal](images/addgoal page.PNG)
