@@ -15,6 +15,5 @@ module.exports = {
       'quicksand': 'Quicksand'
     }
   },
-  plugins: [require('tailwindcss'),
-  require('autoprefixer'),],
+  plugins: [],
 }
