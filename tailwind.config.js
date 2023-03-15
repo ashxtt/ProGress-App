@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+  purge: {
+    content: ["./src/**/*.{js,jsx}", "./index.html"],
   theme: {
     
     colors: {
@@ -10,6 +11,8 @@ module.exports = {
       'dark': '#000000',
     },
   },
+  },
+  
   extend: {
     fontFamily: {
       'quicksand': 'Quicksand'
