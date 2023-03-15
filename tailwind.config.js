@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    content: ["./src/**/*.{js,jsx}", "./index.html"],
+  
+  content: ["./src/**/*.{js,jsx}", "./index.html"],
   theme: {
     
     colors: {
@@ -11,7 +11,7 @@ module.exports = {
       'dark': '#000000',
     },
   },
-  },
+  
   
   extend: {
     fontFamily: {

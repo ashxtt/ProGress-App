@@ -27,6 +27,8 @@ An app to assist people who struggle with completing tasks on time, being commit
 ## Wireframe
 ![wireframe](images/progress%20wireframe.PNG)
 
+Trello: https://trello.com/b/jkgVv3EW/progress-app
+
 ## ERD Model
 ```json
 {
