@@ -7,7 +7,7 @@ import Show from "../pages/Show"
 import Index from "../pages/Index"
 
 export default function Main(props) {
-  const URL = "https://progress-backend.netlify.app/"
+  const URL = "https://progress-backend.netlify.app/goals"
 
     const [goals, setGoals] = useState([])
 
