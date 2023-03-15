@@ -4,7 +4,7 @@ An app to assist people who struggle with completing tasks on time, being commit
 
 
 
-## ProGress Live Site Link
+## ProGress Live Site Link: https://playful-selkie-a933cd.netlify.app/
 
 ## Tech Used
 - React.js
@@ -25,6 +25,7 @@ An app to assist people who struggle with completing tasks on time, being commit
 
 
 ## Wireframe
+![wireframe](images/pregress%20wireframe.PNG)
 
 ## ERD Model
 ```json
